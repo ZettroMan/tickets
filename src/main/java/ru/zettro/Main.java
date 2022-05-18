@@ -17,6 +17,7 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,7 +47,8 @@ public class Main {
 
         List<Ticket> fullTicketList = ticketList.getTickets();
         List<Ticket> filteredTicketList = fullTicketList.stream().filter(ticket ->
-                (ticket.getOrigin().equals(originAirportCode) && ticket.getDestination().equals(destinationAirportCode))).toList();
+                (ticket.getOrigin().equals(originAirportCode) && ticket.getDestination().equals(destinationAirportCode)))
+                .collect(Collectors.toList());
 
         int ticketsCount = filteredTicketList.size();
         if (ticketsCount == 0) {
