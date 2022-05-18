@@ -98,7 +98,7 @@ public class Main {
                     (flightDurations.get(rankWholePart + 1) - flightDurations.get(rankWholePart)) * rankDecimalPart;
         }
 
-        System.out.printf("90-й процентиль времени полета (инклюзивный) равен : %.2f мин. (~%s)",
+        System.out.printf("90-й процентиль времени полета (инклюзивный) равен : %.2f мин. (~%s)%n",
                 percentileInclusive, toHoursAndMinutes(Math.round(percentileInclusive)));
 
     }
