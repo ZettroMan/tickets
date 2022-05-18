@@ -69,12 +69,6 @@ public class Main {
 
         flightDurations.sort(null);
 
-        System.out.println("Sorted array:");
-        for (Long fd : flightDurations) {
-            System.out.print(fd + ", ");
-        }
-        System.out.println("\n");
-
         if ((float) ticketsCount / (ticketsCount + 1) >= 0.9f) {
             // если выборка достаточно большая (>=9) - можно посчитать эксклюзивный 90-й процентиль
             float floatRank = 0.9f * (ticketsCount + 1) - 1;
